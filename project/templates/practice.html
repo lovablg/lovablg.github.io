@@ -1,0 +1,152 @@
+        <!DOCTYPE html>
+        <html lang="ru">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Практическая часть</title>
+            <style>
+                    body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f8ff; /* Светло-голубой фон */
+            color: #2c3e50; /* Темно-серый текст */
+            line-height: 1.6;
+        }
+
+        header {
+            background: #e0f0ff; /* Пастельно-голубой */
+            color: #2c3e50;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #1e88e5; /* Яркий голубой */
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #1565c0; /* Темно-голубой при наведении */
+        }
+
+        main {
+            padding: 25px;
+            max-width: 800px;
+            margin: 20px auto 80px;
+            background: #ffffff; /* Белый фон для контента */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #cce7ff; /* Голубая граница */
+        }
+
+        footer {
+            background: #e0f0ff;
+            color: #2c3e50;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        h1, h2 {
+            color: #1e88e5; /* Акцентный голубой */
+            margin-bottom: 1.2em;
+        }
+
+        h2 {
+            border-bottom: 2px solid #cce7ff; /* Светло-голубая линия */
+            padding-bottom: 8px;
+        }
+
+        .image-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .image-item {
+            text-align: center;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #cce7ff;
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+            }
+        }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>Практическая часть</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/theory">Теория</a></li>
+                        <li><a href="/practice">Практика</a></li>
+                        <li><a href="/results">Результаты</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section>
+                    <h2>Этапы сборки:</h2>
+                    <ul>
+                <li>Заранее соединенные элементы Пельтье соединяем с радиатором и алюминиевыми профилями с помощью термопасты и винтов со стяжками, а также прикрепляем преобразователь к корпусу, чтоб он не болтался</li>
+                <li>Прикрепляем к концам радиатора пластмассовые элементы для подставки, чтобы провода не соприкасались с подставкой</li>
+                <li>Изготавливаем отдельно подставку из алюминиевых уголков размером: 125х170м</li>
+            </ul>
+
+            <h2>Модель</h2>
+
+            <!-- Общий контейнер для двух фото -->
+            <div class="image-container">
+                <div class="image-item">
+                    <img src="/static/3D product.png" alt="Ожидаемый вид">
+                    <div class="image-caption">Ожидание</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="/static/product.jpg" alt="Готовый генератор">
+                    <div class="image-caption">Реальность</div>
+                </div>
+            </div> <!-- Закрывающий тег контейнера -->
+        </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2025 Сидорова Ангелина</p>
+            </footer>
+        </body>
+        </html>
