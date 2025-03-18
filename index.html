@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проект: Генератор на элементе Пельтье</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Cormorant Infant', serif;
             margin: 0;
             padding: 15px;
             background: #f0f8ff;
             color: #2c3e50;
-            line-height: 1.6;
+            line-height: 1.5;
+            font-size: 18px;
         }
 
         .section {
@@ -27,15 +29,15 @@
         h1, h2 {
             color: #1e88e5;
             margin-bottom: 1em;
-            font-weight: bold;
+            font-weight: 700;
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 2.2rem;
         }
 
         h2 {
-            font-size: 20px;
+            font-size: 1.8rem;
             border-bottom: 2px solid #cce7ff;
             padding-bottom: 6px;
         }
@@ -49,34 +51,29 @@
         }
 
         .image-item {
-            flex: 1 1 100%;
-            max-width: 600px;
+            flex: 1 1 300px;
+            min-width: 250px;
             text-align: center;
         }
 
         .image-item img {
-            width: auto;
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
             border-radius: 8px;
             border: 2px solid #cce7ff;
         }
 
-        /* Специальные стили для изображения сравнения */
-        .comparison-image img {
-            max-width: 90%;
-            margin: 0 auto;
-            display: block;
-        }
-
         ul {
             padding-left: 20px;
+            font-size: 1.1rem;
         }
 
         .footer {
             text-align: center;
             margin-top: 30px;
             color: #666;
+            font-size: 0.9rem;
         }
 
         nav ul {
@@ -101,29 +98,66 @@
             background: #f0f8ff;
             border-radius: 20px;
             transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 1.1rem;
         }
 
+        nav ul li a:hover {
+            background: #d0e8ff;
+        }
+
+        /* Мобильная адаптация */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
+                font-size: 16px;
             }
-            
+
             h1 {
-                font-size: 20px;
+                font-size: 1.8rem;
             }
 
             h2 {
-                font-size: 18px;
+                font-size: 1.5rem;
+            }
+
+            .section {
+                padding: 15px;
+                margin: 15px auto;
             }
 
             .image-item {
                 flex: 1 1 100%;
+            }
+
+            nav ul li a {
+                padding: 6px 12px;
+                font-size: 1rem;
+            }
+
+            .image-item img {
+                max-height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            ul {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- Главная страница -->
     <div class="section">
         <h1>Проектная работа: Генератор на элементе Пельтье</h1>
         <nav>
@@ -159,11 +193,22 @@
     <!-- Практика -->
     <div class="section" id="practice">
         <h2>Практическая часть</h2>
-        <h3>Этапы сборки:</h3>
+        <h3>Материалы необходимые для реализации:</h3>
         <ul>
-            <li>Последовательное соединение 6 элементов Пельтье</li>
-            <li>Монтаж алюминиевых радиаторов с термопастой</li>
-            <li>Установка преобразователя напряжения DC-DC</li>
+            <li>Термоэлектрический модуль Пельтье</li>
+            <li>Преобразователь напряжения</li>
+            <li>Свечки</li>
+            <li>радиатор</li>
+            <li>термопаста</li>
+            <li>Алюминиевые профили(необязательно)</li>
+        </ul>
+        <h2>Этапы сборки:</h2>
+        <ul>
+            <li>Соединяем элементы Пельтье последовательно для эффективной работы при малом нагреве.</li>
+            <li>Для стабильной работы генератора необходимо подключить повышающий преобразователь напряжения DC-DC с выходным напряжением 5в</li>
+            <li>Элементы Пельтье соединяем с радиатором и алюминиевыми профилями с помощью термопасты и винтов со стяжками, а также прикрепляем преобразователь к корпусу, чтоб он не болтался</li>
+            <li>Прикрепляем к концам радиатора пластмассовые элементы для подставки, чтобы провода не соприкасались с подставкой</li>
+            <li>Изготавливаем отдельно подставку из алюминиевых уголков размером: 125х170м</li>
         </ul>
 
         <div class="image-container">
@@ -177,23 +222,22 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Результаты -->
     <div class="section" id="results">
         <h2>Результаты</h2>
-        <div class="image-container comparison-image">
+        <div class="image-container">
             <div class="image-item">
                 <img src="static/sravni.png" alt="Сравнение характеристик">
             </div>
         </div>
 
-    <h3>Основные показатели:</h3>
-        <ul>
-            <li>Напряжение: 4.5-5 В</li>
-            <li>Мощность: 1 Вт</li>
-            <li>Стоимость: 2304 рубля</li>
-        </ul>
+        <h3>Сравнительная характеристика</h3>
+        <p>Разработанная модель генератора демонстрирует конкурентоспособные характеристики в сравнении с коммерческими аналогами. Несмотря на меньшую мощность и время зарядки, она обладает такими преимуществами, как низкая стоимость, легкость и простота сборки. Это делает ее перспективной для использования в местах, где доступ к традиционным источникам энергии ограничен.</p>
 
+        <h3>Заключени</h3>
+        <p>В результате создания нашей модели термоэлектрического преобразователя, на основе полученных данных, я считаю, что элемент Пельтье доказал свою эффективность в качестве альтернативного источника энергии , пока только для маломощных устройств. Разработанная модель может быть использована в бытовых условиях, Например, для использования фонариков или радиоприемников в походных условиях или в местах с отсутствием доступа к электричеству. Несмотря на относительно низкий КПД, простота и экологичность технологии делают ее перспективной для дальнейшего развития и применения. </p>
+        
         <h3>Контакты</h3>
         <p>Подробнее в Telegram:
             <a href="https://t.me/peltier_alternativeenergysource" target="_blank">
